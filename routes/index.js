@@ -1,18 +1,17 @@
 var models = require('../models');
 
 /*
- * GET the main swipe page
+ * GET the main index page
  */
-
 
 exports.view = function(req, res){
 	models.Story
 
     .find({})
     .sort('updated_date')
-    .exec(afterQuery);
+    .exec(renderIndex);
 
-  function afterQuery(err, stories) {
+  function renderIndex(err, stories) {
   	if (err) console.log(err);
 
 	  // Render the page
