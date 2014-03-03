@@ -12,8 +12,8 @@ var StorySchema = new Mongoose.Schema({
 });
 exports.Story = Mongoose.model('Story', StorySchema);
 
-var TagSchema = new Mongoose.Schema({
-  "story_id": String,
-  "tag_name": String
+var TagStorySchema = new Mongoose.Schema({
+  "tag_name": String,
+  "story_id": String
 });
-exports.Story = Mongoose.model('Tag', TagSchema);
+exports.TagStory = Mongoose.model('TagStory', TagSchema);

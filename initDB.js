@@ -22,14 +22,14 @@ var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);
 
 // Remove all db stuff
-// models.Friend
-//   .find({})
-//   .remove()
-//   .exec();
-// models.User
-//   .find({})
-//   .remove()
-//   .exec();
+models.Story
+  .find({})
+  .remove()
+  .exec();
+models.TagStory
+  .find({})
+  .remove()
+  .exec();
 
 mongoose.connection.close();
 

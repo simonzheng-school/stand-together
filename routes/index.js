@@ -6,5 +6,5 @@
 
 exports.view = function(req, res){
   // Render the page
-  res.render('index', {title: 'Rekindle'});
+  res.render('index', {title: 'Stand Together'});
 };
