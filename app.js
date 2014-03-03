@@ -15,7 +15,6 @@ var mongoose = require('mongoose');
 
 // Routes
 var index = require('./routes/index');
-var about = require('./routes/foo')
 
 
 // Connect to the Mongo database, whether locally or on Heroku
