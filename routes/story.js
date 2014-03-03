@@ -22,9 +22,14 @@ exports.view = function(req, res){
   }
 };
 
-exports.submit = function(req, res) {
+exports.new = function(req, res) {
 	console.log('newstory');
 	res.render('story_new', {
 		title: 'Tell Your Story'
 	});
+};
+
+exports.create = function(req, res) {
+	console.log('creating');
+	res.json(req.body)
 }

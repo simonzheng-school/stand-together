@@ -66,6 +66,8 @@ app.locals.layout = './main.handlebars';
 app.get('/', index.view);
 app.get('/about', about.view);
 app.get('/story/:id', story.view);
+app.get('/story', story.new);
+app.post('/story', story.create);
 app.get('/search', discover.search);
 app.get('/discover', discover.discover);
 
