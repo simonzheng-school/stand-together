@@ -17,3 +17,8 @@ Steps to run on heroku:
 * `>> heroku create app-name` (for new app)
 * `>> heroku addons:add mongolab` (for new app)
 * `>> heroku run node initDB.js` (optional)
+
+Steps to run the app:
+---------------------
+
+* `>> node app.js` (for running the app locally on designated port)
