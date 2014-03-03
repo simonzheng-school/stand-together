@@ -18,7 +18,7 @@ Steps to run on heroku:
 * `>> heroku addons:add mongolab` (for new app)
 * `>> heroku run node initDB.js` (optional)
 
-Steps to run the app:
----------------------
+Steps to get express and other packages:
+----------------------------------------
 
-* `>> node app.js` (for running the app locally on designated port)
+* `>> npm install` (NOTE: you must be in root directory)

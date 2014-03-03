@@ -15,6 +15,7 @@ var mongoose = require('mongoose');
 
 // Routes
 var index = require('./routes/index');
+var story = require('./routes/story');
 
 
 // Connect to the Mongo database, whether locally or on Heroku
@@ -61,6 +62,8 @@ if ('development' == app.get('env')) {
 // ACTUAL URLS
 app.locals.layout = './main.handlebars';
 app.get('/', index.view);
+app.get('/story/:id', story.view);
+
 
 // Create server
 http.createServer(app).listen(app.get('port'), function(){
