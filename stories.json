@@ -9,8 +9,8 @@
 			"I was recently asked if I had hope for comprehensive immigration reform and for the future. My answer a long time ago would have simply been “yes,” but my answer today is a much more pragmatic one—why only hope when you can also organize? I choose to share my story and participate with RAISE because that will mean more people understanding our parents’ sacrifices and the injustices our communities face. It will mean people becoming more aware of what is happening at our borders, and it will hopefully mean that families won’t have to be torn apart anymore. It will mean being able to decide for ourselves and our families what we want, and it will mean the raising of all of our voices in shaping this nation."
 		],
 		"email": "jeff@example.com",
-		"image1": "/public/images/jeff_single.jpg",
-		"image2": "/public/images/jeff_double.jpg",
+		"image1": "/images/jeff_single.jpg",
+		"image2": "/images/jeff_double.jpg",
 		"stand_with_count": 15
 	},
 	{
@@ -23,8 +23,36 @@
 			"I share my story now because I believe nothing—and no one—is a hopeless case. As much as I struggle to understand the proposed rules in Washington, and why they still fail to include so many people like my family and me, I also know that I will never give up. I won’t accept that now is not my time, too."
 		],
 		"email": null,
-		"image1": "/public/images/jeff_single.jpg",
-		"image2": "/public/images/jeff_double.jpg",
+		"image1": "/images/rhustie_single.jpg",
+		"image2": "/images/rhustie_double.jpg",
+		"stand_with_count": 20
+	},
+	{
+		"title": "Jeffrey Louie2",
+		"paragraphs": [
+			"My parents never hid from me the fact that I was undocumented. I grew up knowing I was missing a number and some papers, but the reality of being undocumented—of how much you are silenced, limited, and turned away—didn’t come until much later.",
+			"My family arrived in New York from Hong Kong in 1995 for better education prospects and other political reasons. I was just three and a half years old, so with the exception of our small apartment and the playground, I don’t remember much about Hong Kong. My parents had actually made an earlier trip in 1988 to visit my grandmother, who had immigrated to New York by herself and started working in Brooklyn’s garment factories. My brother was born a year after their visit, and is still the only member of the family who is a U.S. citizen. We are therefore a mixed status family, in which everyone’s immigration status differs.",
+			"But my story after our arrival in the States doesn’t actually stray too far from everyone else’s. I went to elementary, middle, and high school in Brooklyn. I was the seventh grader who nearly beat all the eighth graders in the school spelling bee, the freshman everyone copied homework from. I participated in clubs, and volunteered at community organizations. I was a classmate, a neighbor, a best friend.",
+			"And yet as an immigrant, my experiences have also been undeniably different. My choices for college were severely limited because of financial reasons and my ineligibility for financial aid. I felt helpless watching my father struggle to support our family because I could not look for jobs. I could not drive, and I could not travel. I was repeatedly told by strangers and peers, both intentionally and unintentionally, that I did not belong in America.",
+			"I was recently asked if I had hope for comprehensive immigration reform and for the future. My answer a long time ago would have simply been “yes,” but my answer today is a much more pragmatic one—why only hope when you can also organize? I choose to share my story and participate with RAISE because that will mean more people understanding our parents’ sacrifices and the injustices our communities face. It will mean people becoming more aware of what is happening at our borders, and it will hopefully mean that families won’t have to be torn apart anymore. It will mean being able to decide for ourselves and our families what we want, and it will mean the raising of all of our voices in shaping this nation."
+		],
+		"email": "jeff@example.com",
+		"image1": "/images/jeff_single.jpg",
+		"image2": "/images/jeff_double.jpg",
+		"stand_with_count": 15
+	},
+	{
+		"title": "Rhustie Valdizno2",
+		"paragraphs": [
+			"When I moved here from the Philippines at the age of 15, it was one of the happiest moments of my life. It was a fresh start for my family considering what we had been through during the Asian economic crisis back in the late 90s. My siblings managed to become citizens but I could not. Their stories have happy endings. Mine doesn’t…yet.",
+			"Not only am I undocumented, I am gay. People repeatedly told me I couldn’t marry the person I loved, and build a life with them in my own country. I’ve been told that I am someone who doesn’t belong, someone who must hide, and someone who remains unseen. I was “different” from my own family. I was isolated on every level. At first it seemed like the introduction of the new immigration bill was a ray of hope. But the bill puts me on a very long and uncertain 13-year path to citizenship. I’ve already spent nearly half my life waiting—and now pushing for a law that will humanely allow us to be citizens. But with this bill, I wonder how many of the millions of other undocumented immigrants and I will actually get to the end of that path.",
+			"The bill also stops brothers or sisters who are citizens from sponsoring other siblings if they are married and over the age of 31. I’m 28 – not yet 31, but close. My family has already been scarred from being torn apart, and there is every reason to believe I might be torn apart from them again. I got tired of hearing I was a hopeless case. Last April, I went with RAISE to the national day of action for immigration reform in Washington DC. Hundreds of undocumented youth were there. As I looked out over the crowd of people, I realized that no matter how many times I am told I am a hopeless case, I am part of a bigger movement, one that extends beyond my own world.",
+			"At this point, I have gone back to college. I hope to become a doctor, however long that hope has to be on hold. At the beginning of the summer, I announced on stage to hundreds during RAISE’s theater performance, #UndocuAsians, that I was undocumented. I had friends in the audience who I was coming out to for the first time. Finally, in June, the U.S Supreme Court struck down the Defense of Marriage Act (DOMA) and for the first time recognized gay marriage.",
+			"I share my story now because I believe nothing—and no one—is a hopeless case. As much as I struggle to understand the proposed rules in Washington, and why they still fail to include so many people like my family and me, I also know that I will never give up. I won’t accept that now is not my time, too."
+		],
+		"email": null,
+		"image1": "/images/rhustie_single.jpg",
+		"image2": "/images/rhustie_double.jpg",
 		"stand_with_count": 20
 	}
 ]
