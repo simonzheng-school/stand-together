@@ -1,5 +1,7 @@
 # General ---------------------------------------
 *.DS_Store
+*.sublime-project
+*.sublime-workspace
 
 # We can ignore css as node will compile css from less
 public/css/*
