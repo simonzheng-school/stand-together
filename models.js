@@ -2,9 +2,8 @@ var Mongoose = require('mongoose');
 
 
 var StorySchema = new Mongoose.Schema({
-  "_id": String,
   "title": String,
-  "body": String,
+  "body": Array,
   "email": String,
   "image1": String,
   "image2": String,

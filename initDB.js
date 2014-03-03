@@ -14,6 +14,7 @@
 var mongoose = require('mongoose');
 var models   = require('./models');
 
+
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'stand-together';
@@ -21,52 +22,52 @@ var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);
 
-// Remove all db stuff
+
+// Reset db stuff
 models.Story
   .find({})
   .remove()
-  .exec();
-models.TagStory
-  .find({})
-  .remove()
-  .exec();
+  .exec(fillStories);
 
-mongoose.connection.close();
 
-// Do the initialization here
+// Callback functions
+function fillStories(err) {
+  if (err) console.log(err);
 
-// Step 1: load the JSON data
-/*var projects_json = require('./projects.json');
-
-// Step 2: Remove all existing documents
-models.Project
-  .find()
-  .remove()
-  .exec(onceClear); // callback to continue at
-
-// Step 3: load the data from the JSON file
-function onceClear(err) {
-  if(err) console.log(err);
-
+  var storiesJSON = require('./stories.json');
   // loop over the projects, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
-  var to_save_count = projects_json.length;
-  for(var i=0; i<projects_json.length; i++) {
-    var json = projects_json[i];
-    var proj = new models.Project(json);
+  var to_save_count = storiesJSON.length;
+  for(var i = 0; i < storiesJSON.length; i++) {
+    var json = storiesJSON[i];
+    var story = new models.Story(json);
 
-    proj.save(function(err, proj) {
-      if(err) console.log(err);
+    story.save(function(err, story) {
+      if (err) console.log(err);
 
       to_save_count--;
       console.log(to_save_count + ' left to save');
       if(to_save_count <= 0) {
         console.log('DONE');
-        // The script won't terminate until the
-        // connection to the database is closed
-        mongoose.connection.close()
+        whenDoneFillingStory();
       }
     });
   }
 }
-*/
+
+
+function whenDoneFillingStory() {
+  models.TagStory
+    .find({})
+    .remove()
+    .exec();
+
+
+  // We're done. Close connection to db
+  mongoose.connection.close();
+
+}
+
+
+
+
