@@ -1,9 +1,14 @@
 {{#story}}
 <h1>{{title}}</h1>
-<!-- Image 1 and 2 -->
+<b> Created on: </b> {{created_date}} <br/>
+<b> Updated on: </b> {{updated_date}} <br/>
+
+<div class="story">
+	<img src="{{image2}}" class="img-responsive">
 	{{#each paragraphs}}
 		<p> {{this}} </p>
 	{{/each}}
+</div>
 {{/story}}
 
-{{story}}
+<!-- TODO: Include the social buttons -->

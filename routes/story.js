@@ -21,3 +21,10 @@ exports.view = function(req, res){
 	  });
   }
 };
+
+exports.submit = function(req, res) {
+	console.log('newstory');
+	res.render('story_new', {
+		title: 'Tell Your Story'
+	});
+}
