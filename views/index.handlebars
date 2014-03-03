@@ -1,1 +1,11 @@
 <h1>Hello world!</h1>
+<p>New stuff.</p>
+
+{{#each stories}}
+	<p>test</p>
+	<h1><a href="/story/{{_id}}">{{title}}</a></h1>
+	<h3>{{stand_with_count}}</h3>
+	{{#each body}}
+		<p>{{this}}</p>
+	{{/each}}
+{{/each}}

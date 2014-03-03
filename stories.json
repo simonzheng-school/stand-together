@@ -12,5 +12,19 @@
 		"image1": "/public/images/jeff_single.jpg",
 		"image2": "/public/images/jeff_double.jpg",
 		"stand_with_count": 15
+	},
+	{
+		"title": "Rhustie Valdizno",
+		"body": [
+			"When I moved here from the Philippines at the age of 15, it was one of the happiest moments of my life. It was a fresh start for my family considering what we had been through during the Asian economic crisis back in the late 90s. My siblings managed to become citizens but I could not. Their stories have happy endings. Mine doesn’t…yet.",
+			"Not only am I undocumented, I am gay. People repeatedly told me I couldn’t marry the person I loved, and build a life with them in my own country. I’ve been told that I am someone who doesn’t belong, someone who must hide, and someone who remains unseen. I was “different” from my own family. I was isolated on every level. At first it seemed like the introduction of the new immigration bill was a ray of hope. But the bill puts me on a very long and uncertain 13-year path to citizenship. I’ve already spent nearly half my life waiting—and now pushing for a law that will humanely allow us to be citizens. But with this bill, I wonder how many of the millions of other undocumented immigrants and I will actually get to the end of that path.",
+			"The bill also stops brothers or sisters who are citizens from sponsoring other siblings if they are married and over the age of 31. I’m 28 – not yet 31, but close. My family has already been scarred from being torn apart, and there is every reason to believe I might be torn apart from them again. I got tired of hearing I was a hopeless case. Last April, I went with RAISE to the national day of action for immigration reform in Washington DC. Hundreds of undocumented youth were there. As I looked out over the crowd of people, I realized that no matter how many times I am told I am a hopeless case, I am part of a bigger movement, one that extends beyond my own world.",
+			"At this point, I have gone back to college. I hope to become a doctor, however long that hope has to be on hold. At the beginning of the summer, I announced on stage to hundreds during RAISE’s theater performance, #UndocuAsians, that I was undocumented. I had friends in the audience who I was coming out to for the first time. Finally, in June, the U.S Supreme Court struck down the Defense of Marriage Act (DOMA) and for the first time recognized gay marriage.",
+			"I share my story now because I believe nothing—and no one—is a hopeless case. As much as I struggle to understand the proposed rules in Washington, and why they still fail to include so many people like my family and me, I also know that I will never give up. I won’t accept that now is not my time, too."
+		],
+		"email": null,
+		"image1": "/public/images/jeff_single.jpg",
+		"image2": "/public/images/jeff_double.jpg",
+		"stand_with_count": 15
 	}
 ]
