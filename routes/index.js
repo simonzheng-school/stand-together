@@ -7,6 +7,7 @@ var models = require('../models');
 
 exports.view = function(req, res){
 	models.Story
+
     .find({})
     .sort('updated_date')
     .exec(afterQuery);
