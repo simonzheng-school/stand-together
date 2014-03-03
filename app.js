@@ -62,7 +62,6 @@ if ('development' == app.get('env')) {
 // ACTUAL URLS
 app.locals.layout = './main.handlebars';
 app.get('/', index.view);
-app.get('/about', foo.view);
 
 // Create server
 http.createServer(app).listen(app.get('port'), function(){
