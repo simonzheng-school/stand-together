@@ -15,6 +15,7 @@ var mongoose = require('mongoose');
 
 // Routes
 var index = require('./routes/index');
+var about = require('./routes/about');
 var story = require('./routes/story');
 
 
@@ -62,6 +63,7 @@ if ('development' == app.get('env')) {
 // ACTUAL URLS
 app.locals.layout = './main.handlebars';
 app.get('/', index.view);
+app.get('/about', about.view);
 app.get('/story/:id', story.view);
 
 
