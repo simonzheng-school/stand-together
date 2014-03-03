@@ -7,8 +7,8 @@ var models = require('../models');
 
 exports.view = function(req, res){
 	models.Story
-    .find({})
-    .exec(afterQuery);
+	    .find({})
+	    .exec(afterQuery);
 
   function afterQuery(err, stories) {
   	if (err) console.log(err);

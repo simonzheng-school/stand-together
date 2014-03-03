@@ -1,3 +1,9 @@
-<h1>Hello world!</h1>
+{{#story}}
+<h1>{{title}}</h1>
+<!-- Image 1 and 2 -->
+	{{#each paragraphs}}
+		<p> {{this}} </p>
+	{{/each}}
+{{/story}}
 
-<p>{{id}}</p>
+{{story}}

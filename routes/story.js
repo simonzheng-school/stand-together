@@ -1,14 +1,23 @@
-
+var models = require('../models');
 /*
- * GET the main swipe page
+ * GET the story page for the particular request id
  */
 
 
 exports.view = function(req, res){
 	var storyID = req.params.id;
-  // Render the page
-  res.render('story', {
-  	title: 'Test Story Title',
-  	id: storyID
-  });
+
+	models.Story
+		.find( { "_id": storyID}, {"email": 0 } )
+	    .exec(sendStoryParams);
+
+
+  function sendStoryParams(err, story) {
+  	if (err) console.log(err);
+
+	  // Render the page
+	  res.render('story', {
+	  	story: 	story
+	  });
+  }
 };
