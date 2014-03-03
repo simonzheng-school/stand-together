@@ -17,6 +17,7 @@ var mongoose = require('mongoose');
 var index = require('./routes/index');
 var about = require('./routes/about');
 var story = require('./routes/story');
+var discover = require('./routes/discover');
 
 
 // Connect to the Mongo database, whether locally or on Heroku
@@ -65,6 +66,8 @@ app.locals.layout = './main.handlebars';
 app.get('/', index.view);
 app.get('/about', about.view);
 app.get('/story/:id', story.view);
+app.get('/search', discover.search);
+app.get('/discover', discover.discover);
 
 
 // Create server
