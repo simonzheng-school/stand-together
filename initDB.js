@@ -40,6 +40,8 @@ function fillStories(err) {
   var to_save_count = storiesJSON.length;
   for(var i = 0; i < storiesJSON.length; i++) {
     var json = storiesJSON[i];
+    json.created_date = new Date();
+    json.updated_date = json.created_date;
     var story = new models.Story(json);
 
     story.save(function(err, story) {
