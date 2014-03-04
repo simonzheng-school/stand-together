@@ -2,6 +2,7 @@ var OK_RESPONSE_CODE = 200;
 var INTERNAL_SERVER_ERROR_RESPONSE_CODE = 200;
 
 var models = require('../models');
+var fs = require('fs');
 /*
  * GET the story page for the particular request id
  */
@@ -58,28 +59,32 @@ exports.create = function(req, res) {
 					fs.readFile(req.files.image2.path, function(err, data) {
 						var new_path = __dirname + 'uploads/' + id + '_2.png';
 						fs.writeFile(new_path, data, function(err) {
-							res.redirect('/story/' + story._id);
+							
+						models.Story
+							.find( { "_id": id}, {"email": 0 } )
+						    .exec(sendStoryParams);
+
+
+						  function sendStoryParams(err, story) {
+						  	if (err) console.log(err);
+
+							  // Render the page
+							  res.render('story', {
+							  	story: 	story
+							  });
+						  }
+
+
+
+
 						});
 					});
 				});
 			});
 
-			res.redirect('/story/' + story._id);
+			// res.redirect('/story/' + story._id);
 		}
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	console.log('creating');
@@ -88,42 +93,4 @@ exports.create = function(req, res) {
 	console.log(req.body);
 	console.log(req.files);
 
-
-	// var story_data = req.body;
-
-	// story_data.paragraphs = story_data.paragraphs.split('\n');
-
-	// var newStory = models.Story(story_data);
-	// newStory.save(function(err, fields, files) {
-	// 	if (err) {
-	// 	} else {
-	// 		// res.send(OK_RESPONSE_CODE);
-	// 		// res.send(format('\nuploaded %s (%d Kb) to %s as %s'
-	// 		//     , req.files.image.name
-	// 		//     , req.files.image.size / 1024 | 0
-	// 		//     , req.files.image.path
-	// 		//     , req.body.title));
-	// 		res.json(req.body)
-
-
-
-
-
-	// 		res.render('story', {
-	// 			story : story_data
-	// 		});
-	// 	}
-	// });
 }
-
-
-// req.form.complete(function(err, fields, files){
-//     if (err) {
-//       next(err);
-//     } else {
-//       console.log('\nuploaded %s to %s'
-//         ,  files.image.filename
-//         , files.image.path);
-//       res.redirect('back');
-//     }
-//   });
