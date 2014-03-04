@@ -40,6 +40,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser('Rekindle secret key'));
 app.use(express.session());
+app.use(express.bodyParser()); // WTF needs to go before app.router wtfomgfml
 app.use(app.router);
 app.use(lessMiddleware({
     src: __dirname + "/less/custom",
@@ -54,7 +55,6 @@ app.use(lessMiddleware({
     force: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.bodyParser());
 
 
 // development only
