@@ -1,7 +1,7 @@
 <h1>This page will contain a form for submitting a new story. </h1>
 <p> Note that we have title available in the JSON obj </p>
 
-<form action="/story" method="post">
+<form action="/story" method="post" enctype="multipart/form-data">
 Title: <input type='text' name='title'/>
 Paragraphs: <input type='text' name='paragraphs'/>
 Email: <input type='text' name='email'/>
