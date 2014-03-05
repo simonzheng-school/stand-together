@@ -41,6 +41,7 @@ exports.create = function(req, res) {
 	story_data.paragraphs = story_data.paragraphs.split('\n');
 	story_data.image1 = '/uploads/' + req.files.image1.originalFilename;
 	story_data.image2 = '/uploads/' + req.files.image2.originalFilename;
+	story_data.stand_with_count = 0;
 
 	// DO some shit with image names here
 	// Also save those somewhere
@@ -66,7 +67,7 @@ exports.create = function(req, res) {
 						// var new_image2_name = id + '_2.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
 						var new_path = path.join(__dirname, '../public/uploads/') + req.files.image2.originalFilename;
 						fs.writeFile(new_path, data, function(err) {
-							
+
 						models.Story
 							.find( { "_id": id}, {"email": 0 } )
 						    .exec(sendStoryParams);
