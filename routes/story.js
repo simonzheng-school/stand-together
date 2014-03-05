@@ -39,8 +39,8 @@ exports.create = function(req, res) {
 	story_data.created_date = new Date();
 	story_data.updated_date = story_data.created_date;
 	story_data.paragraphs = story_data.paragraphs.split('\n');
-	story_data.image1 = path.join(__dirname, '../public/uploads/') + story_data.created_date.toString() + req.files.image1.originalFilename;
-	story_data.image2 = path.join(__dirname, '../public/uploads/') + story_data.created_date.toString() + req.files.image2.originalFilename;
+	story_data.image1 = '/uploads/' +  req.files.image1.originalFilename;
+	story_data.image2 = '/uploads/' +  req.files.image2.originalFilename;
 
 	// DO some shit with image names here
 	// Also save those somewhere
