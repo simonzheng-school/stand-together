@@ -19,7 +19,6 @@ exports.view = function(req, res){
 
   function sendStoryParams(err, story) {
   	if (err) console.log(err);
-  	console.log(story);
 	  // Render the page
 	  res.render('story', {
 	  	story: 	story
@@ -28,7 +27,6 @@ exports.view = function(req, res){
 };
 
 exports.new = function(req, res) {
-	console.log('newstory');
 	res.render('story_new', {
 		title: 'Tell Your Story'
 	});
@@ -41,7 +39,6 @@ exports.create = function(req, res) {
 	story_data.updated_date = date;
 	story_data.paragraphs = story_data.paragraphs.split('\n');
 	story_data.image1 = '/uploads/' + date.toJSON() + '_1_' + req.files.image1.originalFilename;
-	console.log(story_data.image1);
 	story_data.image2 = '/uploads/' + date.toJSON() + '_2_' + req.files.image2.originalFilename;
 	story_data.stand_with_count = 0;
 
