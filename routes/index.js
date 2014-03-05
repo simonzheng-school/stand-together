@@ -14,6 +14,10 @@ exports.view = function(req, res){
   function renderIndex(err, stories) {
   	if (err) console.log(err);
 
+  	for (var i=0; i<stories.length; i++) {
+  		stories[i].add_clearfix_after = (i+1) % 3 == 0;
+  	}
+
 	  // Render the page
 	  res.render('index', {
 	  	title: 'Stand Together',

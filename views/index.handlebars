@@ -1,13 +1,17 @@
 <div class="container">
 	<div class="row">
 		{{#each stories}}
-		<a href="/story/{{_id}}">
 			<div class="col-sm-4">
-				<h1>{{title}}</h1>
-				<h1><small><i class="fa fa-users"></i> {{stand_with_count}}</small></h1>
-				<img src="{{image1}}" class="img-responsive">
+				<a href="/story/{{_id}}">
+					<h1>{{title}}</h1>
+					<h1><small><i class="fa fa-users"></i> {{stand_with_count}}</small></h1>
+					<img src="{{image1}}" class="img-responsive">
+				</a>
 			</div>
-		</a>
+
+			{{#if add_clearfix_after}}
+				<div class="clearfix"></div>
+			{{/if}}
 		{{/each}}
 
 	</div>
