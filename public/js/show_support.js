@@ -15,7 +15,7 @@ function showSupport(e) {
 	var url = '/story/show_support/' + storyId;
 
 	$.get(url, function(response) {
-		$('.show-support-btn .stand-with-count').text(response.stand_with_count);
+		$('.stand-with-count').text(response.stand_with_count);
 		$('.show-support-btn .support-cta').hide();
 		$('.show-support-btn .supported-msg').show();
 		$('.show-support-btn').unbind('click');
