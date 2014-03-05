@@ -39,8 +39,8 @@ exports.create = function(req, res) {
 	story_data.created_date = new Date();
 	story_data.updated_date = story_data.created_date;
 	story_data.paragraphs = story_data.paragraphs.split('\n');
-	story_data.image1 = '/uploads/' +  req.files.image1.originalFilename;
-	story_data.image2 = '/uploads/' +  req.files.image2.originalFilename;
+	story_data.image1 = '/uploads/' + req.files.image1.originalFilename;
+	story_data.image2 = '/uploads/' + req.files.image2.originalFilename;
 
 	// DO some shit with image names here
 	// Also save those somewhere
@@ -58,13 +58,13 @@ exports.create = function(req, res) {
 
 			fs.readFile(req.files.image1.path, function(err, data) {
 				// var new_image1_name = id + '_1.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
-				var new_path = story_data.image1;
+				var new_path = path.join(__dirname, '../public/uploads/') + req.files.image1.originalFilename;
 				console.log(new_path);
 
 				fs.writeFile(new_path, data, function(err) {
 					fs.readFile(req.files.image2.path, function(err, data) {
 						// var new_image2_name = id + '_2.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
-						var new_path = story_data.image2;
+						var new_path = path.join(__dirname, '../public/uploads/') + req.files.image2.originalFilename;
 						fs.writeFile(new_path, data, function(err) {
 							
 						models.Story
