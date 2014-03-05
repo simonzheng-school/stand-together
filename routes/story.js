@@ -73,10 +73,8 @@ exports.create = function(req, res) {
 						  function sendStoryParams(err, story) {
 						  	if (err) console.log(err);
 
-							  // Render the page
-							  res.render('story', {
-							  	story: 	story
-							  });
+							  // Redirect to new story
+							  res.redirect('/story/' + id)
 						  }
 
 
