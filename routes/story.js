@@ -36,11 +36,13 @@ exports.new = function(req, res) {
 
 exports.create = function(req, res) {
 	var story_data = req.body;
-	story_data.created_date = new Date();
-	story_data.updated_date = story_data.created_date;
+	var date = new Date();
+	story_data.created_date = date;
+	story_data.updated_date = date;
 	story_data.paragraphs = story_data.paragraphs.split('\n');
-	story_data.image1 = '/uploads/' + req.files.image1.originalFilename;
-	story_data.image2 = '/uploads/' + req.files.image2.originalFilename;
+	story_data.image1 = '/uploads/' + date.toJSON() + '_1_' + req.files.image1.originalFilename;
+	console.log(story_data.image1);
+	story_data.image2 = '/uploads/' + date.toJSON() + '_2_' + req.files.image2.originalFilename;
 	story_data.stand_with_count = 0;
 
 	// DO some shit with image names here
@@ -59,13 +61,11 @@ exports.create = function(req, res) {
 
 			fs.readFile(req.files.image1.path, function(err, data) {
 				// var new_image1_name = id + '_1.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
-				var new_path = path.join(__dirname, '../public/uploads/') + req.files.image1.originalFilename;
-				console.log(new_path);
-
+				var new_path = path.join(__dirname, '../public/uploads/') + date.toJSON() + '_1_' + req.files.image1.originalFilename;
 				fs.writeFile(new_path, data, function(err) {
 					fs.readFile(req.files.image2.path, function(err, data) {
 						// var new_image2_name = id + '_2.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
-						var new_path = path.join(__dirname, '../public/uploads/') + req.files.image2.originalFilename;
+						var new_path = path.join(__dirname, '../public/uploads/') + date.toJSON() + '_2_' + req.files.image2.originalFilename;
 						fs.writeFile(new_path, data, function(err) {
 
 						models.Story
@@ -93,12 +93,5 @@ exports.create = function(req, res) {
 			// res.redirect('/story/' + story._id);
 		}
 	});
-
-
-	console.log('creating');
-	// form({ keepExtensions: true })
-
-	console.log(req.body);
-	console.log(req.files);
 
 }
