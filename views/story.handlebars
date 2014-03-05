@@ -1,49 +1,61 @@
 {{#story}}
 
 <div class="container">
-
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-2">
-			<h1>{{title}}</h1>
-		</div>
-		<div class="col-sm-4 text-right">
-			<h1><small><i class="fa fa-users"></i> {{stand_with_count}}</small></h1>
-		</div>
-	</div>
-
-
-	<div class="row">
-		<div class="story col-sm-8 col-sm-offset-2">
-			<img src="{{image2}}" class="img-responsive">
-			{{#each paragraphs}}
-				<p> {{this}} </p>
-			{{/each}}
-		</div>
-	</div>
-
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<strong> Created on: </strong> {{created_date}} <br/>
-			<strong> Updated on: </strong> {{updated_date}} <br/>
-			<strong>#<u>clickable</u> #<u>tags</u> #<u>go</u> #<u>here</u>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<h1>{{title}}</h1>
+				</div>
+				<div class="col-sm-6 text-right">
+					<h1><small><i class="fa fa-users"></i> {{stand_with_count}}</small></h1>
+				</div>
+			</div>
+
+			<div class="row no-gutter">
+				<div class="col-sm-6">
+					<img src="{{image1}}" class="img-responsive">
+				</div>
+				<div class="col-sm-6">
+					<img src="{{image2}}" class="img-responsive">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					{{#each paragraphs}}
+						<p>{{this}}</p>
+					{{/each}}
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<strong> Created on: </strong> {{created_date}} <br/>
+					<strong> Updated on: </strong> {{updated_date}} <br/>
+					<strong>#<u>clickable</u> #<u>tags</u> #<u>go</u> #<u>here</u>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-7">
+					<h1><small>
+						<i class="fa fa-users"></i>
+						{{stand_with_count}} readers support this story
+					</small></h1>
+				</div>
+				<div class="col-sm-5 text-right">
+					<h1>
+						<i class="fa fa-facebook-square"></i>
+						<i class="fa fa-twitter-square"></i>
+						<i class="fa fa-tumblr-square"></i>
+					</h1>
+				</div>
+			</div>
+
+
 		</div>
 	</div>
-
-	<div class="row">
-		<div class="col-sm-5 col-sm-offset-2">
-			<h1><small>
-				<i class="fa fa-users"></i>
-				{{stand_with_count}} readers support this story
-			</small></h1>
-		</div>
-		<div class="col-sm-3 text-right">
-			<h1>
-				<i class="fa fa-facebook-square"></i>
-				<i class="fa fa-twitter-square"></i>
-				<i class="fa fa-tumblr-square"></i>
-			</h1>
-		</div>
-	</div>
-
 </div>
 {{/story}}
