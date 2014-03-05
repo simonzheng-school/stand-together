@@ -1,24 +1,50 @@
-<h1>This page will contain a form for submitting a new story. </h1>
-<p> Note that we have title available in the JSON obj </p>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h3>
+				It's great that you're choosing to tell your story.
+			</h3>
+			<h3>
+				Telling your story helps you and your community stand together
+				and raises awareness for your cause.
+			</h3>
+		</div>
+	</div>
 
-<form action="/story" method="post" enctype="multipart/form-data">
-Title: <input type='text' name='title'/>
-Paragraphs: <input type='text' name='paragraphs'/>
-Email: <input type='text' name='email'/>
-Image 1: <input type='file' name='image1'/>
-Image 2: <input type='file' name='image2'/>
-<!-- Stand with count -->
-<!-- Created Date -->
-<!-- Updated Date -->
-<input type='submit' value='Submit'/>
-</form>
+	<div class="row">
+		<div class="col-sm-8">
+			<form role="form" action="/story" method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="title">What's your story about?</label>
+					<input type='text' class="form-control" name='title' placeholder="Title"/>
+				</div>
 
-<!-- Schema
-  "title": String,
-  "paragraphs": Array,
-  "email": String,
-  "image1": String,
-  "image2": String,
-  "stand_with_count": Number,
-  "created_date": Date,
-  "updated_date": Date -->
+				<div class="form-group">
+					<label for="image1">What does it look like?</label>
+					<input type='file' name='image1'/>
+					<p class="help-block">This is the main image for your story.</p>
+					<input type='file' name='image2'/>
+					<p class="help-block">
+						Readers will see this second image when they
+						navigate to your story's page.
+					</p>
+				</div>
+
+				<div class="form-group">
+					<label for="paragraphs">Tell your story</label>
+					<textarea class="form-control" rows="20" name='paragraphs'></textarea>
+				</div>
+
+				<div class="form-group">
+					<label>Should we keep in touch?</label>
+					<input type="email" class="form-control" name="email" placeholder="email (optional)">
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-default btn-block">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
