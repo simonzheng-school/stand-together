@@ -95,3 +95,21 @@ exports.create = function(req, res) {
 	});
 
 }
+
+
+/*
+ * Get the new stand_with_count after updating the database for new support
+ */
+
+exports.showSupport = function(req, res) {
+	var storyId = req.params.id;
+
+	models.Story.findByIdAndUpdate(
+		storyId,
+		{ $inc: { stand_with_count: 1 } },
+		function(err, story) {
+			if (err) console.log(err);
+			res.json({ stand_with_count: story.stand_with_count });
+		}
+	);
+};

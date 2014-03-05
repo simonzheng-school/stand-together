@@ -32,9 +32,17 @@
 
 			<div class="row">
 				<div class="col-sm-12">
-					<button type="button" class="btn btn-primary btn-lg btn-block">
+					<button type="button" class="show-support-btn btn btn-primary btn-lg btn-block" story-id="{{_id}}">
 						<span class="fa fa-users"></span>
-						<strong>{{stand_with_count}}</strong> | Add your support
+						<strong><span class="stand-with-count">
+							{{stand_with_count}}
+						</span></strong>
+						<span class="support-cta">
+							Show your support!
+						</span>
+						<span class="supported-msg" style="display: none;">
+							people support this story
+						</span>
 					</button>
 				</div>
 			</div>
@@ -59,3 +67,5 @@
 	</div>
 </div>
 {{/story}}
+
+<script src="/js/show_support.js"></script>

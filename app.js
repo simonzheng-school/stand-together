@@ -69,6 +69,7 @@ app.get('/about', about.view);
 app.get('/story/:id', story.view);
 app.get('/story', story.new);
 app.post('/story', story.create);
+app.get('/story/show_support/:id', story.showSupport);
 app.get('/search', discover.search);
 app.get('/discover', discover.discover);
 
