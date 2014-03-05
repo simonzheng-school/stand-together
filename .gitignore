@@ -3,6 +3,9 @@
 *.sublime-project
 *.sublime-workspace
 
+# Uploaded images
+public/uploads
+
 # We can ignore css as node will compile css from less
 public/css/*
 
