@@ -3,6 +3,7 @@ var INTERNAL_SERVER_ERROR_RESPONSE_CODE = 200;
 
 var models = require('../models');
 var fs = require('fs');
+var path = require('path');
 /*
  * GET the story page for the particular request id
  */
@@ -18,7 +19,7 @@ exports.view = function(req, res){
 
   function sendStoryParams(err, story) {
   	if (err) console.log(err);
-
+  	console.log(story);
 	  // Render the page
 	  res.render('story', {
 	  	story: 	story
@@ -38,6 +39,8 @@ exports.create = function(req, res) {
 	story_data.created_date = new Date();
 	story_data.updated_date = story_data.created_date;
 	story_data.paragraphs = story_data.paragraphs.split('\n');
+	story_data.image1 = path.join(__dirname, '../public/uploads/') + story_data.created_date.toString() + req.files.image1.originalFilename;
+	story_data.image2 = path.join(__dirname, '../public/uploads/') + story_data.created_date.toString() + req.files.image2.originalFilename;
 
 	// DO some shit with image names here
 	// Also save those somewhere
@@ -54,10 +57,14 @@ exports.create = function(req, res) {
 			var id = story._id
 
 			fs.readFile(req.files.image1.path, function(err, data) {
-				var new_path = __dirname + 'uploads/' + id + '_1.png';
+				// var new_image1_name = id + '_1.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
+				var new_path = story_data.image1;
+				console.log(new_path);
+
 				fs.writeFile(new_path, data, function(err) {
 					fs.readFile(req.files.image2.path, function(err, data) {
-						var new_path = __dirname + 'uploads/' + id + '_2.png';
+						// var new_image2_name = id + '_2.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
+						var new_path = story_data.image2;
 						fs.writeFile(new_path, data, function(err) {
 							
 						models.Story
