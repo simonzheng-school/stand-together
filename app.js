@@ -64,7 +64,8 @@ if ('development' == app.get('env')) {
 
 // ACTUAL URLS
 app.locals.layout = './main.handlebars';
-app.get('/', index.view);
+app.get('/', index.landing);
+app.get('/index', index.index);
 app.get('/about', about.view);
 app.get('/story/:id', story.view);
 app.get('/story', story.new);
