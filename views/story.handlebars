@@ -5,26 +5,18 @@
 		<div class="col-sm-8 col-sm-offset-2">
 
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-9">
 					<h1>{{title}}</h1>
 				</div>
-				<div class="col-sm-6 text-right">
+				<div class="col-sm-3 text-right">
 					<h1><small><i class="fa fa-users"></i>
 						<span class="stand-with-count">{{stand_with_count}}</span></small></h1>
 				</div>
 			</div>
 
-			<div class="row no-gutter">
-				<div class="col-sm-6">
-					<img src="{{image1}}" class="img-responsive">
-				</div>
-				<div class="col-sm-6">
-					<img src="{{image2}}" class="img-responsive">
-				</div>
-			</div>
-
 			<div class="row">
 				<div class="col-sm-12">
+					<img class="img-feature" src="{{image1}}">
 					{{#each paragraphs}}
 						<p>{{this}}</p>
 					{{/each}}
