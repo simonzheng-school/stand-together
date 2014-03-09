@@ -17,6 +17,10 @@ exports.landing = function(req, res) {
   renderIndex(req, res, true);
 };
 
+/*
+ * Helpers...
+ */
+
 function renderIndex(req, res, hasLanding) {
   models.Story
   .find({})
