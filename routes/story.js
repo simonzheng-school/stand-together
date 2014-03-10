@@ -27,11 +27,13 @@ exports.view = function(req, res){
   }
 };
 
+
 exports.new = function(req, res) {
 	res.render('story_new', {
 		title: 'Tell Your Story'
 	});
 };
+
 
 exports.create = function(req, res) {
 	var story_data = req.body;
@@ -40,12 +42,7 @@ exports.create = function(req, res) {
 	story_data.updated_date = date;
 	story_data.paragraphs = story_data.paragraphs.split('\n');
 	story_data.image1 = '/uploads/' + date.toJSON() + '_1_' + req.files.image1.originalFilename;
-	story_data.image2 = '/uploads/' + date.toJSON() + '_2_' + req.files.image2.originalFilename;
 	story_data.stand_with_count = 0;
-
-	// DO some shit with image names here
-	// Also save those somewhere
-
 
 	var new_story = models.Story(story_data);
 	// TODO validate saving all fields or something
@@ -54,42 +51,16 @@ exports.create = function(req, res) {
 			console.log(err);
 			res.send(INTERNAL_SERVER_ERROR_RESPONSE_CODE);
 		} else {
-
-			var id = story._id
-
 			fs.readFile(req.files.image1.path, function(err, data) {
-				// var new_image1_name = id + '_1.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
-				var new_path = path.join(__dirname, '../public/uploads/') + date.toJSON() + '_1_' + req.files.image1.originalFilename;
+				var new_path = path.join(__dirname, '../public/uploads/')
+					+ date.toJSON() + '_1_' + req.files.image1.originalFilename;
 				fs.writeFile(new_path, data, function(err) {
-					fs.readFile(req.files.image2.path, function(err, data) {
-						// var new_image2_name = id + '_2.png'; // TODO: make sure that these extensions are correct (e.g. PNG, JPG, etc.)
-						var new_path = path.join(__dirname, '../public/uploads/') + date.toJSON() + '_2_' + req.files.image2.originalFilename;
-						fs.writeFile(new_path, data, function(err) {
-
-						models.Story
-							.find( { "_id": id}, {"email": 0 } )
-						    .exec(sendStoryParams);
-
-
-						  function sendStoryParams(err, story) {
-						  	if (err) console.log(err);
-
-							  // Redirect to new story
-							  res.redirect('/story/' + id)
-						  }
-
-
-
-
-						});
-					});
+					if (err) console.log(err);
+					res.redirect('/story/' + story._id);
 				});
 			});
-
-			// res.redirect('/story/' + story._id);
 		}
 	});
-
 }
 
 
