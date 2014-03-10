@@ -1,0 +1,19 @@
+.story-thumbnail {
+	position: relative;
+
+	.caption {
+		position: absolute;
+		bottom: 0px;
+		color: white;
+		width: 100%;
+
+		padding: 2*@thumbnail-caption-padding @thumbnail-caption-padding @thumbnail-caption-padding;
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+
+		p {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
