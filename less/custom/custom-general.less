@@ -1,16 +1,17 @@
-// Nav stuff ----------------------------------------------
-
-
 // Add padding so can see all content even with lower nav
 body {
-	padding-bottom: @navbar-height + 2*@padding-large-vertical;
+	padding-bottom: @navbar-actual-height + 2*@padding-large-vertical;
 	padding-top: @navbar-height + 2*@padding-large-vertical;
 }
 
 
 // General utilities --------------------------------------
 
+
 // Create .no-gutter for .row
+
+
+// Nav stuff ----------------------------------------------
 .row.no-gutter [class*='col-']:not(:first-child),.row.no-gutter [class*='col-']:not(:last-child) {
   padding-right:0;
   padding-left:0;
