@@ -35,6 +35,7 @@ function fillStories(err) {
   if (err) console.log(err);
 
   var storiesJSON = require('./stories.json');
+  shuffle(storiesJSON);
   // loop over the projects, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
   var to_save_count = storiesJSON.length;
@@ -70,6 +71,21 @@ function whenDoneFillingStory() {
 
 }
 
+
+// From http://stackoverflow.com/questions/962802/is-it-correct-to-use-javascript-array-sort-method-for-shuffling
+// :)
+function shuffle(array) {
+    var tmp, current, top = array.length;
+
+    if(top) while(--top) {
+      current = Math.floor(Math.random() * (top + 1));
+      tmp = array[current];
+      array[current] = array[top];
+      array[top] = tmp;
+    }
+
+    return array;
+}
 
 
 

@@ -6,7 +6,6 @@ var StorySchema = new Mongoose.Schema({
   "paragraphs": Array,
   "email": String,
   "image1": String,
-  "image2": String,
   "stand_with_count": Number,
   "created_date": Date,
   "updated_date": Date
