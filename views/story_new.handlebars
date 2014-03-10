@@ -5,8 +5,8 @@
 				It's great that you're choosing to tell your story.
 			</h3>
 			<h3>
-				Telling your story helps you and your community stand together
-				and raises awareness for your cause.
+				Telling your story, even anonymously, helps you and your community stand
+				together and raises awareness for your cause.
 			</h3>
 		</div>
 	</div>
@@ -16,13 +16,12 @@
 			<form role="form" action="/story" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="title">What's your story about?</label>
-					<input type='text' class="form-control" name='title' placeholder="Title" id="title-input" data-toggle="tooltip" data-placement="right" title="This is the title for your story"/>
+					<input type='text' class="form-control" name='title' placeholder="Title" id="title-input" data-toggle="popover" data-placement="right" data-trigger="focus" data-html="true" data-content="<p>Choose a short but descriptive title for your story.</p><p>Don't worry about it too much at this stage: you can always come back to it later."/>
 				</div>
 
 				<div class="form-group">
-					<label for="image1">What does it look like?</label>
-					<input type='file' name='image1' id="image-input" data-toggle="tooltip" data-placement="right" title="We understand that your stories may be very personal. Feel free to upload an anonymous photo."/>
-					<p class="help-block">This is the main image for your story.</p>
+					<label for="image1">Choose a photo</label>
+					<input type='file' name='image1' id="image-input" data-toggle="popover" data-placement="right" data-trigger="hover focus" data-html="true" data-content="<p>Please submit a photo of yourself from chin down, as shown in the example.</p><img src='/images/rhustie_left.jpg' style='width: 50%;'></img><p><strong>Why?</strong> This provides a balance between anonymity and providing readers with an identity to rally behind.</p>"/>
 					<!-- <input type='file' name='image2'/>
 					<p class="help-block">
 						Readers will see this second image when they
@@ -32,16 +31,16 @@
 
 				<div class="form-group">
 					<label for="paragraphs">Tell your story</label>
-					<textarea class="form-control" rows="20" name='paragraphs' id="story-input" data-toggle="tooltip" data-placement="right" title="Everyone has a story. Tell your story in any way that you like: there are people out there who will listen."></textarea>
+					<textarea class="form-control" rows="20" name='paragraphs' id="story-input" data-toggle="popover" data-placement="right" data-trigger="focus" data-html="true" data-content="<p>Everyone has a story. Tell your story in any way that you like: there are people out there who will listen.</p><h5>Tips:</h5><ul><li>Anonymity is fine. The most important thing is to avoid putting anyone in danger.</li><li>Don't feel pressured to keep your story short. Try to fill the entire text area or more.</li></ul>"></textarea>
 				</div>
 
 				<div class="form-group">
 					<label>Should we keep in touch?</label>
-					<input type="email" class="form-control" name="email" placeholder="email (optional)" id="email-input" data-toggle="tooltip" data-placement="right" title="Feel free to leave your email here so we can send you a link to your story to look back on it in the future.">
+					<input type="email" class="form-control" name="email" placeholder="email (optional)" id="email-input" data-toggle="popover" data-placement="right" data-trigger="focus" data-html="true" data-content="<p>It's totally optional for you to give us your email.</p><p>However, if you give it to us:</p><ul><li>We promise to never to give it to anyone else.</li><li>We can help you keep track of your stories and their supporters</li><li>You will be able to edit your story later, should you wish to do so.</li></ul>">
 				</div>
 
 				<div class="form-group">
-					<button type="submit" class="btn btn-default btn-block">Submit</button>
+					<button type="submit" class="btn btn-default btn-block" style="margin-bottom: 100px;">Submit</button>
 				</div>
 			</form>
 		</div>
@@ -51,9 +50,9 @@
 
 <script type="text/javascript">
 $(function() {
-	$('#title-input').tooltip();
-	$('#image-input').tooltip();
-	$('#story-input').tooltip();
-	$('#email-input').tooltip();
+	$('#title-input').popover();
+	$('#image-input').popover();
+	$('#story-input').popover();
+	$('#email-input').popover();
 });
 </script>
