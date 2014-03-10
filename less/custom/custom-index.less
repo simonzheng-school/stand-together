@@ -1,4 +1,5 @@
 .story-thumbnail {
+	border: @thumbnail-border-width solid transparent;
 	position: relative;
 
 	.caption {
@@ -16,4 +17,8 @@
 			white-space: nowrap;
 		}
 	}
+}
+
+.story-thumbnail:hover {
+	border: @thumbnail-border-width solid @brand-primary;
 }
