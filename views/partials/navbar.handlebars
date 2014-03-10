@@ -13,30 +13,40 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/story">
-          <i class="fa fa-book"></i>
-          <br/>
-          Share your story
-        </a></li>
-        <li><a href="/">
-          <i class="fa fa-info-circle"></i>
-          <br/>
-          About
-        </a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/discover">
-          <i class="fa fa-compass"></i>
-          <br/>
-          Discover
-        </a></li>
-        <li><a href="/search">
-          <i class="fa fa-search"></i>
-          <br/>
-          Search
-        </a></li>
-      </ul>
+      {{#unless navbarBackMode}}
+        <ul class="nav navbar-nav">
+          <li><a href="/story">
+            <i class="fa fa-book"></i>
+            <br/>
+            Share your story
+          </a></li>
+          <li><a href="/">
+            <i class="fa fa-info-circle"></i>
+            <br/>
+            About
+          </a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/discover">
+            <i class="fa fa-compass"></i>
+            <br/>
+            Discover
+          </a></li>
+          <li><a href="/search">
+            <i class="fa fa-search"></i>
+            <br/>
+            Search
+          </a></li>
+        </ul>
+      {{else}}
+        <ul class="nav navbar-nav">
+          <li><a href="/index">
+            <i class="fa fa-chevron-left"></i>
+            <br/>
+            Back
+          </a></li>
+        </ul>
+      {{/unless}}
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 

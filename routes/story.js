@@ -21,7 +21,8 @@ exports.view = function(req, res){
   	if (err) console.log(err);
 	  // Render the page
 	  res.render('story', {
-	  	story: 	story
+	  	story: 	story,
+	  	navbarBackMode: true
 	  });
   }
 };
