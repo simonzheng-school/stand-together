@@ -16,28 +16,28 @@
 			<form role="form" action="/story" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="title">What's your story about?</label>
-					<input type='text' class="form-control" name='title' placeholder="Title"/>
+					<input type='text' class="form-control" name='title' placeholder="Title" id="title-input" data-toggle="tooltip" data-placement="right" title="This is the title for your story"/>
 				</div>
 
 				<div class="form-group">
 					<label for="image1">What does it look like?</label>
-					<input type='file' name='image1'/>
+					<input type='file' name='image1' id="image-input" data-toggle="tooltip" data-placement="right" title="We understand that your stories may be very personal. Feel free to upload an anonymous photo."/>
 					<p class="help-block">This is the main image for your story.</p>
-					<input type='file' name='image2'/>
+					<!-- <input type='file' name='image2'/>
 					<p class="help-block">
 						Readers will see this second image when they
 						navigate to your story's page.
-					</p>
+					</p> -->
 				</div>
 
 				<div class="form-group">
 					<label for="paragraphs">Tell your story</label>
-					<textarea class="form-control" rows="20" name='paragraphs'></textarea>
+					<textarea class="form-control" rows="20" name='paragraphs' id="story-input" data-toggle="tooltip" data-placement="right" title="Everyone has a story. Tell your story in any way that you like: there are people out there who will listen."></textarea>
 				</div>
 
 				<div class="form-group">
 					<label>Should we keep in touch?</label>
-					<input type="email" class="form-control" name="email" placeholder="email (optional)">
+					<input type="email" class="form-control" name="email" placeholder="email (optional)" id="email-input" data-toggle="tooltip" data-placement="right" title="Feel free to leave your email here so we can send you a link to your story to look back on it in the future.">
 				</div>
 
 				<div class="form-group">
@@ -48,3 +48,12 @@
 	</div>
 
 </div>
+
+<script type="text/javascript">
+$(function() {
+	$('#title-input').tooltip();
+	$('#image-input').tooltip();
+	$('#story-input').tooltip();
+	$('#email-input').tooltip();
+});
+</script>
