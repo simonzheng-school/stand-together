@@ -63,8 +63,6 @@ app.use(lessMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-console.log('SETTING FORCE TO: ' + ! process.env.PORT);
-
 
 // development only
 if ('development' == app.get('env')) {
