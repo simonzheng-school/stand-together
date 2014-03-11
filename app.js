@@ -59,9 +59,11 @@ app.use(lessMiddleware({
     // force true recompiles on every request... not the
     // best for production, but fine in debug while working
     // through changes
-    force: true
+    force: (! process.env.PORT) // true local, false heroku
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+console.log('SETTING FORCE TO: ' + ! process.env.PORT);
 
 
 // development only
