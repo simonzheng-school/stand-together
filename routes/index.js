@@ -1,4 +1,13 @@
+// Imports --------------------------------------
 var models = require('../models');
+
+
+// CONSTANTS --------------------------------------
+var scriptNames = [
+  'jquery.isotope.min.js',
+  'index_layout.js'
+];
+
 
 /*
  * GET the main index page
@@ -36,7 +45,8 @@ function renderIndex(req, res, hasLanding) {
     res.render('index', {
       title: 'Stand Together',
       stories: stories,
-      hasLanding: hasLanding
+      hasLanding: hasLanding,
+      scriptNames: scriptNames
     });
   });
 }
